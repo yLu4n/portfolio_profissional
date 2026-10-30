@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Engenheiro de Software &amp; Desenvolvedor Fullstack</title>
+<meta name="description" content="Portfólio de arquitetura de software, engenharia full-stack, cloud e projetos de alta escala."/>
+<meta name="theme-color" content="#0d1117"/>
+<script>if ('scrollRestoration' in history) history.scrollRestoration = 'manual';</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-surface-bg text-text-main selection:bg-cyber-amber selection:text-black antialiased relative min-h-screen flex flex-col justify-between">
+<!-- TOP HUD BAR / NAV -->
+<header class="fixed top-0 w-full z-50 bg-[#0d1117]/90 backdrop-blur-md border-b border-border-dark">
+<div class="max-w-7xl mx-auto h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+<!-- Logo / System Status -->
+<a class="flex items-center gap-3 shrink-0 group" href="#sobre">
+<div class="w-2.5 h-2.5 rounded-full bg-cyber-amber shadow-[0_0_10px_#facc15] animate-pulse"></div>
+<div class="flex flex-col">
+<span class="font-mono text-xs text-cyber-blue font-bold tracking-wider uppercase">NEXUS // SYS_OS</span>
+<span class="font-mono text-[10px] text-text-muted tracking-widest">FULLSTACK_ARCHITECT</span>
+</div>
+</a>
+<!-- Quick Nav Anchor Links -->
+<nav class="hidden md:flex items-center gap-1 bg-[#161b22]/80 p-1.5 rounded-lg border border-border-dark">
+<a class="px-3.5 py-1.5 rounded text-xs font-mono tracking-wider uppercase text-text-muted hover:text-cyber-amber hover:bg-[#21262d] transition-all" href="#sobre">01. Sobre</a>
+<a class="px-3.5 py-1.5 rounded text-xs font-mono tracking-wider uppercase text-text-muted hover:text-cyber-amber hover:bg-[#21262d] transition-all" href="#tecnologias">02. Tecnologias</a>
+<a class="px-3.5 py-1.5 rounded text-xs font-mono tracking-wider uppercase text-text-muted hover:text-cyber-amber hover:bg-[#21262d] transition-all" href="#carrossel">03. Destaques</a>
+<a class="px-3.5 py-1.5 rounded text-xs font-mono tracking-wider uppercase text-text-muted hover:text-cyber-amber hover:bg-[#21262d] transition-all" href="#projetos">04. Projetos</a>
+<a class="px-3.5 py-1.5 rounded text-xs font-mono tracking-wider uppercase text-text-muted hover:text-cyber-amber hover:bg-[#21262d] transition-all" href="#contatos">05. Contato</a>
+</nav>
+<!-- Player Fast Badge & CTA -->
+<div class="flex items-center gap-4 shrink-0">
+<div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded bg-[#161b22] border border-border-dark text-[11px] font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="text-text-muted">STATUS:</span>
+<span class="text-emerald-400 font-bold uppercase">DISPONÍVEL</span>
+</div>
+<a class="flex items-center gap-2 px-4 py-2 rounded bg-cyber-amber hover:bg-cyber-amber-glow text-black font-mono text-xs font-bold uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(250,204,21,0.25)]" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Iniciar Conexão</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-24 pb-16 flex-1 flex flex-col gap-24">
+<!-- SEÇÃO 1: SOBRE MIM (Hero/Bio gamer-tech com avatar, resumo e stats) -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-6" id="sobre">
+<!-- Telemetry Sub-ribbon -->
+<div class="flex flex-wrap items-center justify-between gap-2 py-2 px-4 bg-surface-card border border-border-dark rounded-lg mb-8 text-xs font-mono text-text-muted">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-cyber-blue shadow-[0_0_8px_#00d2ff]"></span>
+<span class="text-cyber-blue font-semibold">CORE_STATUS: OPERATIONAL</span>
+<span class="text-border-dark">|</span>
+<span>GEO: SA_EAST (BRAZIL)</span>
+</div>
+<div class="flex items-center gap-4">
+<span>SYS_TIME: <span class="text-text-main font-semibold" id="clock">--:--:-- UTC</span></span>
+<span class="px-2 py-0.5 rounded bg-[#21262d] text-cyber-amber font-bold">LVL 48 // S-TIER</span>
+</div>
+</div>
+<!-- Hero Card Layout -->
+<div class="bg-surface-card border border-border-dark rounded-xl p-6 lg:p-10 relative overflow-hidden shadow-2xl">
+<!-- Ambient accents -->
+<div class="absolute -top-24 -right-24 w-80 h-80 bg-cyber-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-80 h-80 bg-cyber-amber/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<!-- Avatar and Rank Column -->
+<div class="lg:col-span-4 flex flex-col items-center text-center p-6 bg-surface-bg/80 border border-border-dark rounded-xl">
+<div class="relative mb-5">
+<div class="w-32 h-32 rounded-2xl p-1 bg-gradient-to-tr from-cyber-amber via-cyber-blue to-cobalt-blue shadow-[0_0_20px_rgba(0,210,255,0.25)]">
+<img alt="Avatar Arquiteto" class="w-full h-full rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wk1MNEiNT1AYcPU7CBDOJCjloHTAT1NWZQLFSNQa8FYYFQfZAECBD59rGRmIwhWB2tafVl70lF1v-FhGueesWUzWfqF-_FIruAXI5VMm6XwZdw514SnAvrk8lr0OHtimJ4FOTAdaWoD9LfKGloZs0K0VYYNnczpPMGLFYEk-CrBTWkp4dYOiI5L58HckTgUNq9YCrHjtc9x6AX5cm05jpxStT4YXLTmG6xfSYcDMne"/>
+</div>
+<div class="absolute -bottom-2 -right-2 px-2.5 py-0.5 rounded bg-black border border-cyber-amber text-cyber-amber font-mono text-[10px] font-bold uppercase shadow-sm">
+                LVL 48
+              </div>
+</div>
+<h3 class="text-xl font-bold text-text-main tracking-tight">ALEX // NEXUS ARCHITECT</h3>
+<p class="text-xs font-mono text-cyber-blue uppercase tracking-widest mt-1 mb-4">Lead Software &amp; Cloud Architect</p>
+<!-- XP Progress HUD -->
+<div class="w-full space-y-1.5 mb-5 text-left bg-surface-card p-3 rounded-lg border border-border-dark">
+<div class="flex justify-between items-center text-xs font-mono">
+<span class="text-text-muted">EXP_PROGRESS</span>
+<span class="text-cyber-amber font-bold">14,200 / 15,000 XP (94%)</span>
+</div>
+<div class="w-full h-2 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-cyber-blue to-cyber-amber rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<div class="w-full flex items-center justify-between text-xs font-mono pt-2 border-t border-border-dark">
+<span class="text-text-muted">CLASSE ATIVA:</span>
+<span class="text-text-main font-semibold">FULLSTACK ELITE</span>
+</div>
+</div>
+<!-- Hero Bio & Fast Action Buttons -->
+<div class="lg:col-span-8 flex flex-col justify-between">
+<div class="space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-hover border border-border-dark text-xs font-mono text-cyber-amber">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>SEÇÃO 01 // DOSSIÊ OPERACIONAL</span>
+</div>
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-text-main leading-tight">
+                Construindo sistemas de alta escala com <span class="text-cyber-amber">precisão tática</span> e elegância.
+              </h1>
+<p class="text-base text-text-muted leading-relaxed max-w-2xl">
+                Mais de 8 anos transformando desafios complexos de engenharia em arquiteturas distribuídas, resilientes e de ultrabaixa latência. Especializado em ecossistemas Cloud Native, microsserviços modernos, interfaces reativas e governança de dados segura.
+              </p>
+</div>
+<!-- Key Stats Matrix -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+<div class="p-3 bg-surface-bg border border-border-dark rounded-lg">
+<div class="text-[10px] font-mono text-text-muted uppercase">Experiência</div>
+<div class="text-xl font-bold text-cyber-amber font-mono mt-0.5">+8 ANOS</div>
+<div class="text-[10px] text-text-muted font-mono">PRODUÇÃO CRÍTICA</div>
+</div>
+<div class="p-3 bg-surface-bg border border-border-dark rounded-lg">
+<div class="text-[10px] font-mono text-text-muted uppercase">Missões Concluídas</div>
+<div class="text-xl font-bold text-cyber-blue font-mono mt-0.5">120+</div>
+<div class="text-[10px] text-emerald-400 font-mono">100% SUCESSO</div>
+</div>
+<div class="p-3 bg-surface-bg border border-border-dark rounded-lg">
+<div class="text-[10px] font-mono text-text-muted uppercase">Uptime Médio</div>
+<div class="text-xl font-bold text-text-main font-mono mt-0.5">99.98%</div>
+<div class="text-[10px] text-text-muted font-mono">SLA GARANTIDO</div>
+</div>
+<div class="p-3 bg-surface-bg border border-border-dark rounded-lg">
+<div class="text-[10px] font-mono text-text-muted uppercase">Commits Verificados</div>
+<div class="text-xl font-bold text-cyber-amber font-mono mt-0.5">12.4K</div>
+<div class="text-[10px] text-cyber-blue font-mono">REPOSITÓRIOS PRO</div>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-wrap gap-4 pt-2">
+<a class="px-6 py-3 rounded-lg bg-cyber-blue hover:bg-cyber-blue/90 text-black font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(0,210,255,0.25)]" href="#projetos">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+<span>Explorar Projetos</span>
+</a>
+<a class="px-6 py-3 rounded-lg bg-surface-hover hover:bg-[#282e38] text-text-main border border-border-dark font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2" href="#contatos">
+<span class="material-symbols-outlined text-[18px]">contact_mail</span>
+<span>Iniciar Contato</span>
+</a>
+<button class="px-4 py-3 rounded-lg bg-surface-bg hover:bg-surface-hover text-text-muted hover:text-text-main border border-border-dark font-mono text-xs uppercase transition-all flex items-center gap-1.5" onclick="window.print()" title="Imprimir / Salvar PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>CV (PDF)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 2: TECNOLOGIAS (Grid categorizado com barras de proficiência) -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8" id="tecnologias">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<div class="flex items-center gap-2 font-mono text-xs text-cyber-amber uppercase tracking-widest mb-1">
+<span class="w-2 h-2 rounded bg-cyber-amber"></span>
+<span>SEÇÃO 02 // STACK TECNOLÓGICO</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-text-main">
+            Pilares Técnicos &amp; Habilidades Operacionais
+          </h2>
+</div>
+<p class="text-xs font-mono text-text-muted max-w-md">
+          Capacidades consolidadas com métricas de proficiência contínua e experiência prática em ambientes de escala.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Quadrante 1: Front-end -->
+<div class="bg-surface-card border border-border-dark hover:border-cyber-blue/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-9 h-9 rounded-lg bg-surface-bg border border-border-dark flex items-center justify-center text-cyber-blue">
+<span class="material-symbols-outlined text-[20px]">devices</span>
+</div>
+<span class="font-mono text-[10px] text-cyber-blue uppercase tracking-wider font-semibold">QUADRANTE 01</span>
+</div>
+<h3 class="text-base font-bold text-text-main group-hover:text-cyber-blue transition-colors mb-1">Front-End Engine</h3>
+<p class="text-xs text-text-muted mb-5">SPAs de alta resposta, micro-frontends, renderização SSR e padrões WCAG AAA.</p>
+<!-- Skills with Proficiency Bars -->
+<div class="space-y-3 font-mono text-xs">
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>React 19 / Next.js</span>
+<span class="text-cyber-blue font-bold">96%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-blue rounded-full" style="width: 96%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>TypeScript</span>
+<span class="text-cyber-blue font-bold">94%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-blue rounded-full" style="width: 94%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Tailwind CSS</span>
+<span class="text-cyber-blue font-bold">98%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-blue rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>WebGL / Three.js</span>
+<span class="text-cyber-blue font-bold">82%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-blue rounded-full" style="width: 82%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-border-dark flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">Vite</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">Redux Toolkit</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">TanStack</span>
+</div>
+</div>
+<!-- Quadrante 2: Back-end -->
+<div class="bg-surface-card border border-border-dark hover:border-cyber-amber/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-9 h-9 rounded-lg bg-surface-bg border border-border-dark flex items-center justify-center text-cyber-amber">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<span class="font-mono text-[10px] text-cyber-amber uppercase tracking-wider font-semibold">QUADRANTE 02</span>
+</div>
+<h3 class="text-base font-bold text-text-main group-hover:text-cyber-amber transition-colors mb-1">Back-End Core</h3>
+<p class="text-xs text-text-muted mb-5">Arquitetura orientada a eventos, APIs REST/gRPC e consistência distribuída.</p>
+<!-- Skills with Proficiency Bars -->
+<div class="space-y-3 font-mono text-xs">
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Go (Golang)</span>
+<span class="text-cyber-amber font-bold">92%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-amber rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Node.js / NestJS</span>
+<span class="text-cyber-amber font-bold">95%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-amber rounded-full" style="width: 95%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>PostgreSQL / Redis</span>
+<span class="text-cyber-amber font-bold">90%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-amber rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Apache Kafka / RabbitMQ</span>
+<span class="text-cyber-amber font-bold">88%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-amber rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-border-dark flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">Prisma</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">GraphQL</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">gRPC</span>
+</div>
+</div>
+<!-- Quadrante 3: Cloud & DevOps -->
+<div class="bg-surface-card border border-border-dark hover:border-cobalt-blue/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-9 h-9 rounded-lg bg-surface-bg border border-border-dark flex items-center justify-center text-blue-400">
+<span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+</div>
+<span class="font-mono text-[10px] text-blue-400 uppercase tracking-wider font-semibold">QUADRANTE 03</span>
+</div>
+<h3 class="text-base font-bold text-text-main group-hover:text-blue-400 transition-colors mb-1">Cloud &amp; DevOps</h3>
+<p class="text-xs text-text-muted mb-5">Infraestrutura como Código (IaC), orquestração de pods e automação CI/CD.</p>
+<!-- Skills with Proficiency Bars -->
+<div class="space-y-3 font-mono text-xs">
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Docker &amp; Kubernetes</span>
+<span class="text-blue-400 font-bold">90%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-blue-500 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>AWS &amp; GCP Solutions</span>
+<span class="text-blue-400 font-bold">92%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-blue-500 rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Terraform IaC</span>
+<span class="text-blue-400 font-bold">86%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-blue-500 rounded-full" style="width: 86%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>GitHub Actions CI/CD</span>
+<span class="text-blue-400 font-bold">94%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-blue-500 rounded-full" style="width: 94%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-border-dark flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">Helm</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">Prometheus</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">Grafana</span>
+</div>
+</div>
+<!-- Quadrante 4: Segurança & Performance -->
+<div class="bg-surface-card border border-border-dark hover:border-yellow-400/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-9 h-9 rounded-lg bg-surface-bg border border-border-dark flex items-center justify-center text-cyber-amber">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+<span class="font-mono text-[10px] text-cyber-amber uppercase tracking-wider font-semibold">QUADRANTE 04</span>
+</div>
+<h3 class="text-base font-bold text-text-main group-hover:text-cyber-amber transition-colors mb-1">Segurança &amp; Speed</h3>
+<p class="text-xs text-text-muted mb-5">Arquitetura Zero-Trust, rotinas de criptografia, caching e observabilidade.</p>
+<!-- Skills with Proficiency Bars -->
+<div class="space-y-3 font-mono text-xs">
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Zero-Trust &amp; OAuth2</span>
+<span class="text-cyber-amber font-bold">94%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-amber rounded-full" style="width: 94%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Low-Latency Tuning</span>
+<span class="text-cyber-amber font-bold">91%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-amber rounded-full" style="width: 91%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Rust Integrations</span>
+<span class="text-cyber-amber font-bold">80%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-amber rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[11px] mb-1">
+<span>Pentest &amp; OWASP Top 10</span>
+<span class="text-cyber-amber font-bold">89%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-bg rounded-full overflow-hidden">
+<div class="h-full bg-cyber-amber rounded-full" style="width: 89%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-5 pt-3 border-t border-border-dark flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">mTLS</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">JWT RSA</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg text-[10px] font-mono text-text-muted">Rate Limiting</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 3: CARROSSEL PARA PROJETOS (Componente interativo em destaque) -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8" id="carrossel">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+<div>
+<div class="flex items-center gap-2 font-mono text-xs text-cyber-blue uppercase tracking-widest mb-1">
+<span class="w-2 h-2 rounded bg-cyber-blue"></span>
+<span>SEÇÃO 03 // DESTAQUES INTERATIVOS</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-text-main">
+            Carrossel de Projetos em Destaque
+          </h2>
+</div>
+<!-- Controls -->
+<div class="flex items-center gap-3">
+<span class="font-mono text-xs text-text-muted mr-2" id="carousel-indicator" role="status" aria-live="polite" aria-atomic="true">01 / 03</span>
+<button aria-label="Slide anterior" class="w-10 h-10 rounded-lg bg-surface-card hover:bg-surface-hover border border-border-dark flex items-center justify-center text-text-main hover:text-cyber-amber transition-colors" id="carousel-prev">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+</button>
+<button aria-label="Próximo slide" class="w-10 h-10 rounded-lg bg-surface-card hover:bg-surface-hover border border-border-dark flex items-center justify-center text-text-main hover:text-cyber-amber transition-colors" id="carousel-next">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Carousel Container -->
+<div class="carousel-stage relative bg-surface-card border border-border-dark rounded-2xl overflow-hidden shadow-2xl">
+<!-- SLIDE 1 -->
+<div class="carousel-item active p-6 lg:p-8" data-slide="1">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 rounded-xl overflow-hidden bg-surface-bg border border-border-dark relative group">
+<img alt="HyperScale Fintech Gateway" class="w-full h-72 sm:h-96 object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZlFj9uISABldp8lLivrPPfP2wGLykTXSQ3nnyuvWLEvwDjsUN1eCx4CFRewUzyUbvQC0KOsB01XcGuqPT9xNHPQLNejxrV8MgUT44yjSNGnsfX6Stq9qLokq-YRgM4ONvwmkJ66Zr821JruZqNUzKvN6UB3LSQY5ZjVaenJAX_zhLws8tBohp02AEAv8Paw9uxnimPuL0jhJx_7B16bbOdeyGIZYOBkf9ZbK8xpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-black/80 border border-cyber-blue text-cyber-blue font-mono text-xs font-bold">LATÊNCIA &lt; 12ms</span>
+<span class="px-2.5 py-1 rounded bg-black/80 border border-border-dark text-text-main font-mono text-xs">140k REQ/SEG</span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-between h-full space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-2 font-mono text-xs text-cyber-amber">
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark font-bold">QUEST #01</span>
+<span>FINTECH / ENGINE ASSÍNCRONA</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main mb-3">HyperScale Fintech Gateway</h3>
+<p class="text-sm text-text-muted leading-relaxed mb-4">
+                  Motor de liquidação financeira de alta performance com Go e barramento Kafka assíncrono. Interface reativa com dashboards analíticos em tempo real e visualização de liquidez instantânea.
+                </p>
+<!-- Impact Metrics -->
+<div class="grid grid-cols-2 gap-3 mb-6 font-mono">
+<div class="p-2.5 bg-surface-bg rounded border border-border-dark">
+<span class="text-[10px] text-text-muted uppercase">Disponibilidade</span>
+<p class="text-base font-bold text-cyber-amber">99.999%</p>
+</div>
+<div class="p-2.5 bg-surface-bg rounded border border-border-dark">
+<span class="text-[10px] text-text-muted uppercase">Throughput</span>
+<p class="text-base font-bold text-cyber-blue">R$ 4.2B / Mês</p>
+</div>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">Golang</span>
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">Kafka</span>
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">React 19</span>
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">PostgreSQL</span>
+</div>
+</div>
+<div class="flex gap-3 pt-2">
+<a class="flex-1 py-2.5 px-4 rounded bg-cyber-blue hover:bg-cyber-blue/90 text-black text-xs font-mono font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Ver Demo Ao Vivo</span>
+</a>
+<a class="py-2.5 px-4 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-main text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Código</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- SLIDE 2 -->
+<div class="carousel-item p-6 lg:p-8" data-slide="2">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 rounded-xl overflow-hidden bg-surface-bg border border-border-dark relative group">
+<img alt="Nebula Cloud Orchestrator" class="w-full h-72 sm:h-96 object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCM7IX-B326SRboU-zOKPTalZPZIP-uXq9wZS_hMv4xoMGhRoWJSX0bqhoTv1inxMCEJ14QutleH5veFPmuJeC5Cyc0k3_5Z2JK-fk4G2ou1zy_tvb5vz8nHERdFk7Wb321D26nw892be4Q_38qP81CpQGi0M3InINeRwS1cxh3P2EYQwOLrH-vy89WMSEo7Jb0laFr26jqQ6DnhA6MjA6hPwzOJUxd_c8MgMl3xI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-black/80 border border-cyber-amber text-cyber-amber font-mono text-xs font-bold">AUTO-HEALING PODS</span>
+<span class="px-2.5 py-1 rounded bg-black/80 border border-border-dark text-text-main font-mono text-xs">MULTI-REGION AWS/GCP</span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-between h-full space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-2 font-mono text-xs text-cyber-blue">
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark font-bold">QUEST #02</span>
+<span>DEVOPS / ORQUESTRADOR MULTI-CLOUD</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main mb-3">Nebula Cloud Orchestrator</h3>
+<p class="text-sm text-text-muted leading-relaxed mb-4">
+                  Plataforma para gerenciamento autônomo de clusters Kubernetes com análise preditiva de telemetria, corte dinâmico de custos de instâncias e rollback automático com zero downtime.
+                </p>
+<!-- Impact Metrics -->
+<div class="grid grid-cols-2 gap-3 mb-6 font-mono">
+<div class="p-2.5 bg-surface-bg rounded border border-border-dark">
+<span class="text-[10px] text-text-muted uppercase">Economia de Cloud</span>
+<p class="text-base font-bold text-cyber-amber">-42% GASTOS</p>
+</div>
+<div class="p-2.5 bg-surface-bg rounded border border-border-dark">
+<span class="text-[10px] text-text-muted uppercase">Tempo de Deploy</span>
+<p class="text-base font-bold text-cyber-blue">48s CI/CD</p>
+</div>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">Kubernetes</span>
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">Terraform</span>
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">AWS EKS</span>
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">Docker</span>
+</div>
+</div>
+<div class="flex gap-3 pt-2">
+<a class="flex-1 py-2.5 px-4 rounded bg-cyber-amber hover:bg-cyber-amber-glow text-black text-xs font-mono font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Ver Demo Ao Vivo</span>
+</a>
+<a class="py-2.5 px-4 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-main text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Código</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- SLIDE 3 -->
+<div class="carousel-item p-6 lg:p-8" data-slide="3">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 rounded-xl overflow-hidden bg-surface-bg border border-border-dark relative group">
+<img alt="Zero-Trust Sentinel Shield" class="w-full h-72 sm:h-96 object-cover opacity-90 group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC22mAbzrm9F3SEnRfP-86vaR_An9NY_W0QWxnkUuRNV3mKRPDIib2l08fdFkKfZ7CMHI6KS6Ld6Wo-MSYWoTxV0A5cgswkLcIg6kptrIu-Y7vWtvjbeRMRNKDJx4oHAPfl01wOihyKZKZcuw02CDuxnWC1vutskXebO_OYdrVsaWbH80USb5cG8RKBS12kEhJw5TQj9j_OOKvu1HKwxVjI-rMcai_6cD85Ul9Qzvg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-black/80 border border-cyber-blue text-cyber-blue font-mono text-xs font-bold">AES-256 GCM</span>
+<span class="px-2.5 py-1 rounded bg-black/80 border border-border-dark text-text-main font-mono text-xs">AUDITORIA ZERO-DAY</span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-between h-full space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-2 font-mono text-xs text-cyber-amber">
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark font-bold">QUEST #03</span>
+<span>SECURITY / CRIPTOGRAFIA RUST</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main mb-3">Zero-Trust Sentinel Shield</h3>
+<p class="text-sm text-text-muted leading-relaxed mb-4">
+                  Camada de autenticação granular e inspeção de payloads em tempo real implementada em Rust com cache Redis ultrarrápido. Bloqueio instantâneo de requisições maliciosas em menos de 4ms.
+                </p>
+<!-- Impact Metrics -->
+<div class="grid grid-cols-2 gap-3 mb-6 font-mono">
+<div class="p-2.5 bg-surface-bg rounded border border-border-dark">
+<span class="text-[10px] text-text-muted uppercase">Anomalias Bloqueadas</span>
+<p class="text-base font-bold text-cyber-amber">100% EFICÁCIA</p>
+</div>
+<div class="p-2.5 bg-surface-bg rounded border border-border-dark">
+<span class="text-[10px] text-text-muted uppercase">Sobrecarga CPU</span>
+<p class="text-base font-bold text-cyber-blue">&lt; 1.8% OVERHEAD</p>
+</div>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">Rust</span>
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">Auth0 / JWT</span>
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">Redis</span>
+<span class="px-2.5 py-1 rounded bg-surface-bg border border-border-dark text-xs font-mono text-text-main">mTLS</span>
+</div>
+</div>
+<div class="flex gap-3 pt-2">
+<a class="flex-1 py-2.5 px-4 rounded bg-cyber-blue hover:bg-cyber-blue/90 text-black text-xs font-mono font-bold uppercase tracking-wider text-center transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Ver Demo Ao Vivo</span>
+</a>
+<a class="py-2.5 px-4 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-main text-xs font-mono font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>Código</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SEÇÃO 4: PROJETOS (Grid de projetos complementares/quests) -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8" id="projetos">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<div class="flex items-center gap-2 font-mono text-xs text-cyber-amber uppercase tracking-widest mb-1">
+<span class="w-2 h-2 rounded bg-cyber-amber"></span>
+<span>SEÇÃO 04 // REPOSITÓRIO DE MISSÕES</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-text-main">
+            Projetos Selecionados &amp; Arquiteturas
+          </h2>
+</div>
+<div class="flex items-center gap-2 font-mono text-xs text-text-muted">
+<span>STATUS:</span>
+<span class="px-2 py-0.5 rounded bg-surface-card border border-border-dark text-cyber-blue font-bold" id="project-total">TOTAL (07 PROJETOS ATIVOS)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6" id="project-grid">
+<!-- Os três destaques também fazem parte do repositório de projetos. -->
+<article class="bg-surface-card border border-border-dark hover:border-cyber-blue/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="relative h-48 rounded-lg overflow-hidden bg-surface-bg mb-4 border border-border-dark">
+<img alt="Painel do HyperScale Fintech Gateway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZlFj9uISABldp8lLivrPPfP2wGLykTXSQ3nnyuvWLEvwDjsUN1eCx4CFRewUzyUbvQC0KOsB01XcGuqPT9xNHPQLNejxrV8MgUT44yjSNGnsfX6Stq9qLokq-YRgM4ONvwmkJ66Zr821JruZqNUzKvN6UB3LSQY5ZjVaenJAX_zhLws8tBohp02AEAv8Paw9uxnimPuL0jhJx_7B16bbOdeyGIZYOBkf9ZbK8xpg"/>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-black/80 border border-cyber-blue text-cyber-blue font-mono text-[10px] font-bold">LATÊNCIA &lt; 12ms</div>
+</div>
+<div class="flex items-center gap-2 mb-2 font-mono text-[11px] text-text-muted"><span class="text-cyber-blue font-bold">PROJETO #01</span><span>//</span><span>FINTECH &amp; ENGINE ASSÍNCRONA</span></div>
+<h3 class="text-xl font-bold text-text-main group-hover:text-cyber-blue transition-colors mb-2">HyperScale Fintech Gateway</h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">Motor de liquidação financeira de alta performance com Go e Kafka. Dashboard analítico em tempo real para visualização de liquidez.</p>
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]"><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Golang</span><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Kafka</span><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">React 19</span><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">PostgreSQL</span></div>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-border-dark"><a class="flex-1 py-2 px-3 rounded bg-surface-hover hover:bg-[#282e38] text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">Demo</a><a class="flex-1 py-2 px-3 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-muted hover:text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">Solicitar código</a></div>
+</article>
+<article class="bg-surface-card border border-border-dark hover:border-cyber-amber/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="relative h-48 rounded-lg overflow-hidden bg-surface-bg mb-4 border border-border-dark">
+<img alt="Painel do Nebula Cloud Orchestrator" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCM7IX-B326SRboU-zOKPTalZPZIP-uXq9wZS_hMv4xoMGhRoWJSX0bqhoTv1inxMCEJ14QutleH5veFPmuJeC5Cyc0k3_5Z2JK-fk4G2ou1zy_tvb5vz8nHERdFk7Wb321D26nw892be4Q_38qP81CpQGi0M3InINeRwS1cxh3P2EYQwOLrH-vy89WMSEo7Jb0laFr26jqQ6DnhA6MjA6hPwzOJUxd_c8MgMl3xI"/>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-black/80 border border-cyber-amber text-cyber-amber font-mono text-[10px] font-bold">MULTI-CLOUD</div>
+</div>
+<div class="flex items-center gap-2 mb-2 font-mono text-[11px] text-text-muted"><span class="text-cyber-amber font-bold">PROJETO #02</span><span>//</span><span>DEVOPS &amp; ORQUESTRAÇÃO</span></div>
+<h3 class="text-xl font-bold text-text-main group-hover:text-cyber-amber transition-colors mb-2">Nebula Cloud Orchestrator</h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">Gerenciamento autônomo de clusters Kubernetes com análise preditiva de telemetria, otimização de custos e rollback automático.</p>
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]"><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Kubernetes</span><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Terraform</span><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">AWS EKS</span><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Docker</span></div>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-border-dark"><a class="flex-1 py-2 px-3 rounded bg-surface-hover hover:bg-[#282e38] text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">Demo</a><a class="flex-1 py-2 px-3 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-muted hover:text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">Solicitar código</a></div>
+</article>
+<article class="bg-surface-card border border-border-dark hover:border-cyber-blue/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="relative h-48 rounded-lg overflow-hidden bg-surface-bg mb-4 border border-border-dark">
+<img alt="Painel do Zero-Trust Sentinel Shield" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC22mAbzrm9F3SEnRfP-86vaR_An9NY_W0QWxnkUuRNV3mKRPDIib2l08fdFkKfZ7CMHI6KS6Ld6Wo-MSYWoTxV0A5cgswkLcIg6kptrIu-Y7vWtvjbeRMRNKDJx4oHAPfl01wOihyKZKZcuw02CDuxnWC1vutskXebO_OYdrVsaWbH80USb5cG8RKBS12kEhJw5TQj9j_OOKvu1HKwxVjI-rMcai_6cD85Ul9Qzvg"/>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-black/80 border border-cyber-blue text-cyber-blue font-mono text-[10px] font-bold">ZERO-TRUST</div>
+</div>
+<div class="flex items-center gap-2 mb-2 font-mono text-[11px] text-text-muted"><span class="text-cyber-blue font-bold">PROJETO #03</span><span>//</span><span>SECURITY &amp; CRIPTOGRAFIA</span></div>
+<h3 class="text-xl font-bold text-text-main group-hover:text-cyber-blue transition-colors mb-2">Zero-Trust Sentinel Shield</h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">Autenticação granular e inspeção de payloads em tempo real com Rust e Redis para bloqueio rápido de requisições maliciosas.</p>
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]"><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Rust</span><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Auth0 / JWT</span><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Redis</span><span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">mTLS</span></div>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-border-dark"><a class="flex-1 py-2 px-3 rounded bg-surface-hover hover:bg-[#282e38] text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">Demo</a><a class="flex-1 py-2 px-3 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-muted hover:text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">Solicitar código</a></div>
+</article>
+<!-- Projeto 1: Metaverse WebGL Interface -->
+<article class="bg-surface-card border border-border-dark hover:border-cyber-blue/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="relative h-48 rounded-lg overflow-hidden bg-surface-bg mb-4 border border-border-dark">
+<img alt="Aetheria 3D Metaverse Interface" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3endOroe5y9E5zlYpWCnQ40DRrNiqG2onRFj5uDjip7sBIIAZwjQNwa9Sc87YxWIVDOSILM4scFRJDFKF_os6fTVCnUeYm-e6s7wiqvgzvEYXcfakfjTbGUXPl8lyUckSO0dyIZtlhSdrxnL0fsPH-cF7GqHAAu0pw9UKRIK7_zqbmzbgxfAxrJqPOGPzIm3U6sODH3EaXyHA1067Y8KUa--s8TlDNFYT9xVuIbs"/>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-black/80 border border-cyber-blue text-cyber-blue font-mono text-[10px] font-bold">
+                60 FPS LOCKED
+              </div>
+</div>
+<div class="flex items-center gap-2 mb-2 font-mono text-[11px] text-text-muted">
+<span class="text-cyber-amber font-bold">PROJETO #04</span>
+<span>//</span>
+<span>FRONT-END &amp; SPATIAL UI</span>
+</div>
+<h3 class="text-xl font-bold text-text-main group-hover:text-cyber-blue transition-colors mb-2">
+              Aetheria 3D Metaverse Interface
+            </h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">
+              Design System espacial e frontend imersivo em WebGL/Three.js. Otimizado para taxas de atualização estáveis a 60 FPS com testes rigorosos de usabilidade e padrões de acessibilidade.
+            </p>
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Three.js</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Next.js 14</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">WebGL</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Tailwind</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-border-dark">
+<a class="flex-1 py-2 px-3 rounded bg-surface-hover hover:bg-[#282e38] text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px] text-cyber-blue">visibility</span>
+<span>Demo</span>
+</a>
+<a class="flex-1 py-2 px-3 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-muted hover:text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>Solicitar código</span>
+</a>
+</div>
+</article>
+<!-- Projeto 2: Autonomous Stream Processing Engine -->
+<article class="bg-surface-card border border-border-dark hover:border-cyber-amber/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="relative h-48 rounded-lg overflow-hidden bg-surface-bg mb-4 border border-border-dark">
+<img alt="Streaming Data Pipeline" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZlFj9uISABldp8lLivrPPfP2wGLykTXSQ3nnyuvWLEvwDjsUN1eCx4CFRewUzyUbvQC0KOsB01XcGuqPT9xNHPQLNejxrV8MgUT44yjSNGnsfX6Stq9qLokq-YRgM4ONvwmkJ66Zr821JruZqNUzKvN6UB3LSQY5ZjVaenJAX_zhLws8tBohp02AEAv8Paw9uxnimPuL0jhJx_7B16bbOdeyGIZYOBkf9ZbK8xpg"/>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-black/80 border border-cyber-amber text-cyber-amber font-mono text-[10px] font-bold">
+                1M+ EVENTS/MIN
+              </div>
+</div>
+<div class="flex items-center gap-2 mb-2 font-mono text-[11px] text-text-muted">
+<span class="text-cyber-blue font-bold">PROJETO #05</span>
+<span>//</span>
+<span>DATA PIPELINE &amp; STREAMING</span>
+</div>
+<h3 class="text-xl font-bold text-text-main group-hover:text-cyber-amber transition-colors mb-2">
+              Kinesis Vector Ingestion Bus
+            </h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">
+              Pipeline de processamento massivo de telemetria e embeddings vetoriais com tolerância a falhas. Indexação em tempo real para busca semântica com particionamento automático.
+            </p>
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Go</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Apache Kafka</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Qdrant</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Docker</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-border-dark">
+<a class="flex-1 py-2 px-3 rounded bg-surface-hover hover:bg-[#282e38] text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px] text-cyber-amber">visibility</span>
+<span>Demo</span>
+</a>
+<a class="flex-1 py-2 px-3 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-muted hover:text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>Solicitar código</span>
+</a>
+</div>
+</article>
+<!-- Projeto 3: Serverless Identity Federation -->
+<article class="bg-surface-card border border-border-dark hover:border-cyber-blue/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="relative h-48 rounded-lg overflow-hidden bg-surface-bg mb-4 border border-border-dark">
+<img alt="Identity Federation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC22mAbzrm9F3SEnRfP-86vaR_An9NY_W0QWxnkUuRNV3mKRPDIib2l08fdFkKfZ7CMHI6KS6Ld6Wo-MSYWoTxV0A5cgswkLcIg6kptrIu-Y7vWtvjbeRMRNKDJx4oHAPfl01wOihyKZKZcuw02CDuxnWC1vutskXebO_OYdrVsaWbH80USb5cG8RKBS12kEhJw5TQj9j_OOKvu1HKwxVjI-rMcai_6cD85Ul9Qzvg"/>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-black/80 border border-cyber-blue text-cyber-blue font-mono text-[10px] font-bold">
+                OIDC / FIDO2
+              </div>
+</div>
+<div class="flex items-center gap-2 mb-2 font-mono text-[11px] text-text-muted">
+<span class="text-cyber-amber font-bold">PROJETO #06</span>
+<span>//</span>
+<span>SECURITY &amp; IDENTITY AUTH</span>
+</div>
+<h3 class="text-xl font-bold text-text-main group-hover:text-cyber-blue transition-colors mb-2">
+              ChronoKey Identity SSO Hub
+            </h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">
+              Gateway de autenticação federada com suporte nativo a biometria FIDO2, chaves WebAuthn e controle de permissões granular baseado em atributos (ABAC).
+            </p>
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Node.js</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Auth0</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">AWS Lambda</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">DynamoDB</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-border-dark">
+<a class="flex-1 py-2 px-3 rounded bg-surface-hover hover:bg-[#282e38] text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px] text-cyber-blue">visibility</span>
+<span>Demo</span>
+</a>
+<a class="flex-1 py-2 px-3 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-muted hover:text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>Solicitar código</span>
+</a>
+</div>
+</article>
+<!-- Projeto 4: Edge Observability Monitor -->
+<article class="bg-surface-card border border-border-dark hover:border-cyber-amber/50 rounded-xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="relative h-48 rounded-lg overflow-hidden bg-surface-bg mb-4 border border-border-dark">
+<img alt="Observability Network" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCM7IX-B326SRboU-zOKPTalZPZIP-uXq9wZS_hMv4xoMGhRoWJSX0bqhoTv1inxMCEJ14QutleH5veFPmuJeC5Cyc0k3_5Z2JK-fk4G2ou1zy_tvb5vz8nHERdFk7Wb321D26nw892be4Q_38qP81CpQGi0M3InINeRwS1cxh3P2EYQwOLrH-vy89WMSEo7Jb0laFr26jqQ6DnhA6MjA6hPwzOJUxd_c8MgMl3xI"/>
+<div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-black/80 border border-cyber-amber text-cyber-amber font-mono text-[10px] font-bold">
+                OPEN TELEMETRY
+              </div>
+</div>
+<div class="flex items-center gap-2 mb-2 font-mono text-[11px] text-text-muted">
+<span class="text-cyber-blue font-bold">PROJETO #07</span>
+<span>//</span>
+<span>OBSERVABILITY &amp; METRICS</span>
+</div>
+<h3 class="text-xl font-bold text-text-main group-hover:text-cyber-amber transition-colors mb-2">
+              PulseTrace Edge Telemetry
+            </h3>
+<p class="text-xs text-text-muted leading-relaxed mb-4">
+              Agente ultraleve em Rust para coleta de traces distribuídos em edge locations da Cloudflare e edge nodes de microserviços com visualização instantânea.
+            </p>
+<div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Rust</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">OpenTelemetry</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">Grafana</span>
+<span class="px-2 py-0.5 rounded bg-surface-bg border border-border-dark text-text-muted">ClickHouse</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-border-dark">
+<a class="flex-1 py-2 px-3 rounded bg-surface-hover hover:bg-[#282e38] text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px] text-cyber-amber">visibility</span>
+<span>Demo</span>
+</a>
+<a class="flex-1 py-2 px-3 rounded bg-surface-bg hover:bg-surface-hover border border-border-dark text-text-muted hover:text-text-main text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5" href="#contatos">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>Solicitar código</span>
+</a>
+</div>
+</article>
+</div>
+<nav class="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-border-dark pt-5 font-mono text-xs" id="project-pagination" aria-label="Paginação dos projetos">
+<p class="text-text-muted" id="project-page-summary" role="status" aria-live="polite">Exibindo 1–6 de 7 projetos</p>
+<div class="flex items-center gap-2">
+<button class="rounded-lg border border-border-dark bg-surface-card px-3 py-2 text-text-main transition-colors hover:border-cyber-blue hover:text-cyber-blue disabled:cursor-not-allowed disabled:opacity-40" id="project-prev" type="button" aria-label="Página anterior de projetos" disabled>← Anterior</button>
+<div class="flex items-center gap-2" id="project-page-numbers"></div>
+<button class="rounded-lg border border-border-dark bg-surface-card px-3 py-2 text-text-main transition-colors hover:border-cyber-blue hover:text-cyber-blue disabled:cursor-not-allowed disabled:opacity-40" id="project-next" type="button" aria-label="Próxima página de projetos">Próxima →</button>
+</div>
+</nav>
+</section>
+<!-- SEÇÃO 5: CONTATOS E REDES SOCIAIS (Canais diretos, cópia rápida e formulário tático) -->
+<section class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8" id="contatos">
+<div class="bg-surface-card border border-border-dark rounded-2xl p-6 lg:p-10 shadow-2xl relative overflow-hidden">
+<!-- Background Glow -->
+<div class="absolute -right-20 -bottom-20 w-72 h-72 bg-cyber-amber/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+<!-- Direct Channels & Fast Copy -->
+<div class="lg:col-span-5 space-y-6">
+<div>
+<div class="flex items-center gap-2 font-mono text-xs text-cyber-amber uppercase tracking-widest mb-1">
+<span class="w-2 h-2 rounded bg-cyber-amber"></span>
+<span>SEÇÃO 05 // TERMINAL DE CONTATO</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold text-text-main">
+                Pronto para iniciar uma nova missão?
+              </h2>
+<p class="text-sm text-text-muted mt-2 leading-relaxed">
+                Disponível para posições como Arquiteto de Software, Lead Full-Stack e consultorias técnicas em sistemas distribuídos de alta escala.
+              </p>
+</div>
+<!-- Fast Action Contacts -->
+<div class="space-y-3 font-mono text-xs">
+<!-- E-mail item -->
+<div class="p-3 bg-surface-bg border border-border-dark rounded-lg flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 overflow-hidden">
+<span class="material-symbols-outlined text-cyber-amber text-[20px]">mail</span>
+<div class="truncate">
+<span class="text-[10px] text-text-muted block">E-MAIL DIRETO</span>
+<span class="text-text-main font-semibold truncate" id="email-val">alex.nexus.arch@proton.me</span>
+</div>
+</div>
+<button class="p-2 rounded hover:bg-surface-hover text-text-muted hover:text-cyber-amber transition-colors" data-copy="alex.nexus.arch@proton.me" aria-label="Copiar e-mail" title="Copiar e-mail">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- Discord item -->
+<div class="p-3 bg-surface-bg border border-border-dark rounded-lg flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 overflow-hidden">
+<span class="material-symbols-outlined text-cyber-blue text-[20px]">chat</span>
+<div class="truncate">
+<span class="text-[10px] text-text-muted block">DISCORD ID</span>
+<span class="text-text-main font-semibold truncate">alex_nexus#8492</span>
+</div>
+</div>
+<button class="p-2 rounded hover:bg-surface-hover text-text-muted hover:text-cyber-blue transition-colors" data-copy="alex_nexus#8492" aria-label="Copiar Discord ID" title="Copiar Discord">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<!-- PGP Key item -->
+<div class="p-3 bg-surface-bg border border-border-dark rounded-lg flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 overflow-hidden">
+<span class="material-symbols-outlined text-emerald-400 text-[20px]">key</span>
+<div class="truncate">
+<span class="text-[10px] text-text-muted block">CANAL PGP SECURE</span>
+<span class="text-text-main font-semibold truncate">0x9B42_8F01_E4C9</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800 text-[10px] text-emerald-400 font-bold uppercase">VERIFICADO</span>
+</div>
+</div>
+<!-- Social Links Grid -->
+<div class="pt-2">
+<span class="text-[11px] font-mono text-text-muted block mb-3 uppercase tracking-wider">Redes e Conexões Sociais:</span>
+<div class="grid grid-cols-3 gap-2 font-mono text-xs">
+<a class="p-2.5 bg-surface-bg hover:bg-surface-hover border border-border-dark rounded-lg text-center text-text-main hover:text-cyber-blue transition-all flex flex-col items-center gap-1" href="#contatos">
+<span class="font-bold">LinkedIn</span>
+<span class="text-[10px] text-text-muted">/in/alex-arch</span>
+</a>
+<a class="p-2.5 bg-surface-bg hover:bg-surface-hover border border-border-dark rounded-lg text-center text-text-main hover:text-cyber-amber transition-all flex flex-col items-center gap-1" href="#contatos">
+<span class="font-bold">GitHub</span>
+<span class="text-[10px] text-text-muted">@alex-nexus</span>
+</a>
+<a class="p-2.5 bg-surface-bg hover:bg-surface-hover border border-border-dark rounded-lg text-center text-text-main hover:text-cyber-blue transition-all flex flex-col items-center gap-1" href="#contatos">
+<span class="font-bold">Discord</span>
+<span class="text-[10px] text-text-muted">Comunidade</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Tactical Contact Form -->
+<div class="lg:col-span-7 bg-surface-bg border border-border-dark rounded-xl p-6 lg:p-8">
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-border-dark font-mono text-xs">
+<span class="text-text-muted uppercase">PROTOCOL://INITIATE_TRANSMISSION</span>
+<span class="text-cyber-amber font-bold">256-BIT ENCRYPTED</span>
+</div>
+<form class="space-y-4" id="contact-form">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-mono text-xs text-text-muted uppercase mb-1">Seu Nome / Organização</label>
+<input class="w-full bg-[#161b22] border border-border-dark focus:border-cyber-amber focus:ring-1 focus:ring-cyber-amber rounded-lg px-3.5 py-2.5 text-sm text-text-main placeholder-text-muted/60 font-sans outline-none transition-all" placeholder="Ex: Tech Corp // Alice" required="" type="text"/>
+</div>
+<div>
+<label class="block font-mono text-xs text-text-muted uppercase mb-1">E-mail para Retorno</label>
+<input class="w-full bg-[#161b22] border border-border-dark focus:border-cyber-amber focus:ring-1 focus:ring-cyber-amber rounded-lg px-3.5 py-2.5 text-sm text-text-main placeholder-text-muted/60 font-sans outline-none transition-all" placeholder="alice@empresa.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-mono text-xs text-text-muted uppercase mb-1">Tipo de Demanda / Escopo</label>
+<select class="w-full bg-[#161b22] border border-border-dark focus:border-cyber-amber focus:ring-1 focus:ring-cyber-amber rounded-lg px-3.5 py-2.5 text-sm text-text-main font-sans outline-none transition-all">
+<option>Contratação Full-Stack / Tech Lead</option>
+<option>Arquitetura Cloud &amp; Otimização de Performance</option>
+<option>Auditoria de Segurança &amp; Zero-Trust</option>
+<option>Consultoria Especializada em Microsserviços</option>
+<option>Outro Projeto / Proposta</option>
+</select>
+</div>
+<div>
+<label class="block font-mono text-xs text-text-muted uppercase mb-1">Briefing da Mensagem</label>
+<textarea class="w-full bg-[#161b22] border border-border-dark focus:border-cyber-amber focus:ring-1 focus:ring-cyber-amber rounded-lg px-3.5 py-2.5 text-sm text-text-main placeholder-text-muted/60 font-sans outline-none transition-all resize-none" placeholder="Detalhes da demanda técnica, prazos estimados ou perguntas específicas..." required="" rows="4"></textarea>
+</div>
+<button class="w-full py-3.5 px-6 rounded-lg bg-gradient-to-r from-cyber-amber to-cyber-amber-glow hover:opacity-95 text-black font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(250,204,21,0.25)]" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Transmitir Mensagem Tática</span>
+</button>
+<p id="form-status" class="text-xs font-mono text-text-muted" role="status" aria-live="polite"></p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-[#0d1117] border-t border-border-dark py-6">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-text-muted">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-cyber-amber"></span>
+<span class="text-text-main font-semibold">NEXUS // DEV_OS v5.0</span>
+<span class="text-border-dark">|</span>
+<span>LATÊNCIA: 14ms (SA-EAST)</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-cyber-amber transition-colors" href="#sobre">SOBRE</a>
+<a class="hover:text-cyber-amber transition-colors" href="#tecnologias">TECNOLOGIAS</a>
+<a class="hover:text-cyber-amber transition-colors" href="#carrossel">DESTAQUES</a>
+<a class="hover:text-cyber-amber transition-colors" href="#projetos">PROJETOS</a>
+<a class="hover:text-cyber-amber transition-colors" href="#contatos">CONTATO</a>
+</div>
+<div>
+<span>© 2025 ALL RIGHTS RESERVED.</span>
+</div>
+</div>
+</footer>
+
+<script src="./script.js"></script>
+</body></html>
